@@ -78,7 +78,7 @@ setMethod('.Prepare.Maxent.Proj.WorkDir', signature(Data='data.frame'),
             if(is.null(xy)) xy<-matrix(1,nrow=nrow(Data),ncol=2,dimnames=list(NULL,c("X","Y")))
             # if(is.null(proj.name))proj.name<-format(Sys.time(), "%s")
             dir.create(file.path(species.name, proj.name, maxentWDtmp, 'Proj'),
-                       showWarnings = FALSE, recursive =T RUE)
+                       showWarnings = FALSE, recursive =TRUE)
             
             # projection data
             Proj_swd<-cbind(rep("proj",nrow(xy)),xy,Data)

@@ -136,7 +136,7 @@ for (sp_nm in spp_nm){
            pointsize = 12, quality = 90, bg = "white", res = 300) 
       ymax_lim = 0
       ymin_lim = 10000      
-      for (bioclim_cnt in 1:length(myRespPlot2D)) {=
+      for (bioclim_cnt in 1:length(myRespPlot2D)) {
         for (rep in 2:length(myRespPlot2D[[bioclim_cnt]])) {
           ymax_lim = max(ymax_lim, max(myRespPlot2D[[bioclim_cnt]][rep]))
           ymin_lim = min(ymin_lim, min(myRespPlot2D[[bioclim_cnt]][rep]))

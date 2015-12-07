@@ -10,7 +10,7 @@
 require(snowfall)
 
 # create data frame from species csv info file
-spp_info = read.csv(paste0(csv_dir,'FB_spp_data_MAUI.csv')) 
+spp_info = read.csv(paste0(csv_dir,'FB_spp_data_HI.csv')) 
 
 # reset sp_nm counter to first species
 sp_nm = spp_nm[2] 
@@ -29,7 +29,7 @@ sp_parallel_run = function(sp_nm){
   # set options for biomod2 fixes in code (if assigned TRUE in source script)
   if (apply_biomod2_fixes){
     rasterOptions(tmpdir = dir_for_temp_files, timer = T, progress = "text", todisk  = T) #set options for raster package
-    source(paste(codeDir,"3a_projection_mods.R", sep = "/")) #all of fixes to biomod2 code created by AV
+    source(paste0(codeDir,"3a_projection_mods.R")) #all of fixes to biomod2 code created by AV
   }
   
   # definte species name as a character string
